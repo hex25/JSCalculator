@@ -1,3 +1,34 @@
+  
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(73, 73, 73);
+  }
+
+  .no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+  
 body {
     background-color: lightblue;
 }
@@ -5,7 +36,7 @@ body {
 #calc {
     width: 400px;
     background-color: black;
-    margin: 20px auto;
+    margin: 40px auto;
     text-align: center;
     border: 5px solid black;
     border-radius: 10px;
@@ -19,86 +50,133 @@ body {
     font-size: 1.2em;
     font-family: 'Revalia', cursive;
     border-radius: 7px;
+  }
+  .button:hover {
+    background-color: grey;
+    color: yellow;
+  }
+
+  #display {
+    font-size: 1.1em;
+    text-align: right;
+    grid-area: screen;
+    color: rgb(173, 188, 230);
+    font-family: Digits, serif;
+    padding: 15px 20px 0 20px;
+    overflow: scroll;
+    font-family: 'Roboto Mono', monospace;
 
   }
-  #screen {
-    min-height: 50px;
+  #screen-result {
     text-align: right;
-    padding: 50px 20px 20px 20px;
-    font-size: 2.5em;
-    grid-area: screen;
-    font-family: 'Audiowide', cursive;
-    overflow: scroll;
+    padding: 20px 20px 0 20px;
+    font-size: 2em;
+    grid-area: screenresult;
+    font-family: Digits, serif;
     color: lightgoldenrodyellow;
+    overflow: scroll;
+    font-family: 'Roboto Mono', monospace;
   }
  
-#ac {
+#clear {
     grid-area: ac;
     background-color: lightsalmon;
 }
-#btn1 {
-    grid-area: btn1;
+#clear:hover {
+    background-color: rgb(235, 131, 91);
 }
-#btn2 {
-    grid-area: btn2;
+#one {
+    grid-area: one;
 }
-#btn3 {
-    grid-area: btn3;
+#two {
+    grid-area: two;
 }
-#btn4 {
-    grid-area: btn4;
+#three {
+    grid-area: three;
 }
-#btn5 {
-    grid-area: btn5;
+#four {
+    grid-area: four;
 }
-#btn6 {
-    grid-area: btn6;
+#five {
+    grid-area: five;
 }
-#btn7 {
-    grid-area: btn7;
+#six {
+    grid-area: six;
 }
-#btn8 {
-    grid-area: btn8;
+#seven {
+    grid-area: seven;
 }
-#btn9 {
-    grid-area: btn9;
+#eight {
+    grid-area: eight;
 }
-#btn10 {
-    grid-area: btn10;
+#nine {
+    grid-area: nine;
 }
-#btn11 {
-    grid-area: btn11;
+#zero {
+    grid-area: zero;
+}
+#divide {
+    grid-area: divide;
     background-color: #bac8fd;
 }
-#btn12 {
-    grid-area: btn12;
+#divide:hover {
+    background-color: #6b7dbd;
+}
+#multiply {
+    grid-area: multiply;
     background-color: #bac8fd;
 }
-#btn13 {
-    grid-area: btn13;
+#multiply:hover {
+    background-color: #6b7dbd;
+}
+#subtract {
+    grid-area: subtract;
     background-color: #bac8fd;
 }
-#btn14 {
-    grid-area: btn14;
+#subtract:hover {
+    background-color: #6b7dbd;
+}
+#add {
+    grid-area: add;
     background-color: #bac8fd;
 }
-#btn15 {
-    grid-area: btn15;
+#add:hover {
+    background-color: #6b7dbd;
+}
+#decimal {
+    grid-area: decimal;
     background-color: #bac8fd;
 }
-#result {
+#decimal:hover {
+    background-color: #6b7dbd;
+}
+#equals {
     height: 146px;
     line-height: 146px;
-    grid-area: result;
+    grid-area: equals;
     background-color: lightgreen;
+}
+#equals:hover {
+    background-color: rgb(74, 175, 74);
 }
 .grid-container {
     display: grid;
     grid-template-areas:
     'screen screen screen screen'
-    'ac ac btn11 btn12'
-    'btn7 btn8 btn9 btn13'
-    'btn4 btn5 btn6 btn14'
-    'btn1 btn2 btn3 result'
-    'btn10 btn10 btn15 result';
+    'screenresult screenresult screenresult screenresult'
+    'ac ac divide multiply'
+    'seven eight nine subtract'
+    'four five six add'
+    'one two three equals'
+    'zero zero decimal equals';
 } 
+
+footer {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 0.5em;
+    padding-top: 30px;
+}
+#credits {
+    font-size: 0.9em;
+}

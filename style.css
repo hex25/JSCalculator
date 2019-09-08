@@ -173,9 +173,10 @@ body {
 
 footer {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 0.5em;
     padding-top: 30px;
+    font-family: 'Roboto Mono', monospace;
 }
 #credits {
     font-size: 0.9em;
